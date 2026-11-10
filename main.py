@@ -22,28 +22,24 @@ with open("YA_Books.csv", mode="r") as bookFile:
         # if author.startswith("M"):
         #     print(author)
 
-        # if year > most_recent_published:
-            # most_recent_published = year
-            # most_recent_book = book
+        if year > most_recent_published:
+            most_recent_published = year
+            most_recent_book = book
 
-    # print(f"Most recently published{most_recent_book}")
+        if rating < worst_rating:
+            worst_rating = rating
+            worst_rated_book = book
 
-        # if rating < worst_rating:
-            # worst_rating = rating
-            # worst_rated_book = book
+        if year <= 2000:
+            if pages > most_pages:
+                most_pages = pages
+                most_pages_book = book
 
-    # print (f"Book with worst rating{worst_rated_book}")
+        if rating > best_rating:
+            best_rating = rating
+            best_rated_book = book
 
-        # if year <= 2000:
-            # if pages > most_pages:
-                # most_pages = pages
-                # most_pages_book = book
-
-    # print(f"Book with most pages is {most_pages_book}")
-
-        # if rating > best_rating:
-            # best_rating = rating
-            # best_rated_book = book
-
-    # print(f"Highest rated book is {best_rated_book}")
-    
+    print(f"Book with most pages is before 2000 {most_pages_book}")
+    print(f"Most recently published{most_recent_book}")
+    print(f"Highest rated book is {best_rated_book}")
+    print(f"Book with worst rating{worst_rated_book}")
