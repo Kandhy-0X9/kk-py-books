@@ -59,5 +59,8 @@ y = np.array(page)
 plt.bar(x, y, color="#CF63CA", width=0.0125)
 plt.xlabel("Rating")
 plt.ylabel("Pages")
+plt.xticks(rotation = 45)
+plt.yticks(rotation =-30)
+plt.title("Book rating to pages")
 plt.show()
 
